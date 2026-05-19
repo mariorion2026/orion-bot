@@ -1,6 +1,6 @@
 services:
     - type: web
-    name: orion-bot-v1-5-0
+    name: orion-bot
     env: python
     plan: free
     buildCommand: pip install -r requirements.txt
@@ -8,8 +8,3 @@ services:
     envVars:
             - key: TELEGRAM_TOKEN
         sync: false
-            - key: WEBHOOK_URL
-        fromService:
-          type: web
-          name: orion-bot-v1-5-0
-          property: host
